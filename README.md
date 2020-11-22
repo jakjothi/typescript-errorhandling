@@ -23,7 +23,7 @@ $ npm run start
 * Answer
     - Intention of this function is to find user by id. But here we are returning any as return data type, Instead it should be User entity type
     - getRepository(User) -> Here we can use User Repository injected in service constructor and use the repository object and find the record
-    - ID is directly mapped to the query builder, But it should be escaped. Which is not the recommended way this may lead to sql injection attacks.
+    - ID is directly mapped to the query builder, Which is not the recommended way this may lead to sql injection attacks. Instead it should be escaped & binded the value with the query builder.
     
 * Rewritten code is available in src/app.service.ts
 
